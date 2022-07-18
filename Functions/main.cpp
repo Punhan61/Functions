@@ -6,11 +6,12 @@ int Add(int a, int b);
 int Sub(int a, int b);
 int Mul(int a, int b);
 double Div(int a, int b);
-int Fact(int n);
+
 
 void main()
 {
 	setlocale(LC_ALL, "");
+	int chislo, stepen;
 	int n;
 	int a, b;
 	cout << "Введите два числа: "; cin >> a >> b;
@@ -20,8 +21,7 @@ void main()
 	cout << a << " - " << b << " = " << Sub(a, b) << endl;
 	cout << a << " * " << b << " = " << Mul(a, b) << endl;
 	cout << a << " / " << b << " = " << Div(a, b) << endl;
-    cout << "Введите число для вычесление факториала: "; cin >> n;
-	cout << Fact(n) << endl;
+    
 }
 
 int Add(int a, int b)//Реализация функции (определение функции - 
@@ -46,13 +46,3 @@ double Div(int a, int b)
 	//Division - деление 
 	return (double)a / b;
 }
-int Fact(int n)
-{
-	int bufer = 1;
-	for (int i = 1; i <= n; i++)
-	{
-		bufer = bufer * i;
-		return bufer;
-	}
-}
-
