@@ -1,4 +1,4 @@
-#pragma warning (disable:4326)
+п»ї#pragma warning (disable:4326)
 #include<iostream>
 using namespace std;
 
@@ -6,42 +6,53 @@ int Add(int a, int b);
 int Sub(int a, int b);
 int Mul(int a, int b);
 double Div(int a, int b);
+int Fact(int n);
 
 void main()
 {
 	setlocale(LC_ALL, "");
+	int n;
 	int a, b;
-	cout << "Введите два числа: "; cin >> a >> b;
-	int c = Add(a, b);//Использование функции (Вызов функции - 
+	cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: "; cin >> a >> b;
+	int c = Add(a, b);//РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРё (Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё - 
                       //Function call) 
 	cout << a << " + " << b << " = " << c << endl;
 	cout << a << " - " << b << " = " << Sub(a, b) << endl;
 	cout << a << " * " << b << " = " << Mul(a, b) << endl;
 	cout << a << " / " << b << " = " << Div(a, b) << endl;
-
+    cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґР»СЏ РІС‹С‡РµСЃР»РµРЅРёРµ С„Р°РєС‚РѕСЂРёР°Р»Р°: "; cin >> n;
+	cout << Fact(n) << endl;
 }
 
-int Add(int a, int b)//Реализация функции (определение функции - 
+int Add(int a, int b)//Р РµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё (РѕРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё - 
                      //Function defenition)  
 {
-	//Addition - сложение
+	//Addition - СЃР»РѕР¶РµРЅРёРµ
 	int c = a + b;
 	return c;
 }
 int Sub(int a, int b)
 {
-	//Subtraction - вычетание
+	//Subtraction - РІС‹С‡РµС‚Р°РЅРёРµ
 	return a - b;
 }
 int Mul(int a, int b)
 {
-	//Multiplication - умножение
+	//Multiplication - СѓРјРЅРѕР¶РµРЅРёРµ
 	return a * b;
 }
 double Div(int a, int b)
 {
-	//Division - деление 
+	//Division - РґРµР»РµРЅРёРµ 
 	return (double)a / b;
 }
-
+int Fact(int n)
+{
+	int bufer = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		bufer = bufer * i;
+		return bufer;
+	}
+}
 
