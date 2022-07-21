@@ -17,7 +17,7 @@ void ShiftRight(int arr[], const int n,int shift);
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int n = 10;
+	const int n = 5;
 	int arr[n];
 	int shift;
 	FillRand(arr, n);
@@ -117,28 +117,28 @@ int MaxValoeIn(int arr[], const int n)
 	return max;
 }
 
-void ShiftLeft(int arr[], const int n,int shiftLeft)
+void ShiftLeft(int arr[], const int n,int shift)
 {
 	
-	for (int i = 0; i < shiftLeft; i++)
+	for (int i = 0; i < shift; i++)
 	{
 		int buffer = arr[0];
 		for (int j = 0; j < n; j++)
 		{
-			arr[i] = arr[i + 1];
+			arr[j] = arr[j + 1];
 		}
 		arr[n - 1] = buffer;
 	}
 }
 
-void ShiftRight(int arr[], const int n,int shiftRight)
+void ShiftRight(int arr[], const int n,int shift)
 {
-	for (int i = 0; i < shiftRight; i++)
+	for (int i = 0; i < shift; i++)
 	{
-	     int buffer = arr[0];
+	     int buffer = arr[n-1];
 	     for (int j = n - 1; j >= 0; j--)
 	     {
-		     arr[i] = arr[i - 1];
+		     arr[j] = arr[j - 1];
 	     }
 		 arr[0] = buffer;
 	}
