@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork_1", "HomeWork_1\Ho
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{E40C7DEB-CE2B-450A-BEBD-A67A359144B1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays_2", "Arrays_2\Arrays_2.vcxproj", "{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{E40C7DEB-CE2B-450A-BEBD-A67A359144B1}.Release|x64.Build.0 = Release|x64
 		{E40C7DEB-CE2B-450A-BEBD-A67A359144B1}.Release|x86.ActiveCfg = Release|Win32
 		{E40C7DEB-CE2B-450A-BEBD-A67A359144B1}.Release|x86.Build.0 = Release|Win32
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Debug|x64.ActiveCfg = Debug|x64
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Debug|x64.Build.0 = Debug|x64
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Debug|x86.Build.0 = Debug|Win32
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Release|x64.ActiveCfg = Release|x64
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Release|x64.Build.0 = Release|x64
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Release|x86.ActiveCfg = Release|Win32
+		{3D896CAD-2EDB-456E-B27C-3E3097C7DF51}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

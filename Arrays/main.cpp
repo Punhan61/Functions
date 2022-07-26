@@ -8,8 +8,8 @@ void Sort(int arr[], const int n);
 
 int Sum(int arr[], const int n);
 double Avg(int arr[], const int n);
-int MinValoeIn(int arr[], const int n);
-int MaxValoeIn(int arr[], const int n);
+int MinValueIn(int arr[], const int n);
+int MaxValueIn(int arr[], const int n);
 void ShiftLeft(int arr[], const int n,int shift);
 void ShiftRight(int arr[], const int n,int shift);
 
@@ -27,8 +27,8 @@ void main()
 
 	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
 	cout << "Среденее арифметическое: " << Avg(arr, n) << endl;
-	cout << "Минимальное значение элементов массива: " << MinValoeIn(arr, n) << endl;
-	cout << "Махсимальное значение элементов массива: " << MaxValoeIn(arr, n) << endl;
+	cout << "Минимальное значение элементов массива: " << MinValueIn(arr, n) << endl;
+	cout << "Махсимальное значение элементов массива: " << MaxValueIn(arr, n) << endl;
 	cout << "Сдвиг масива влево: "; cin >> shift; cout << endl;
 	ShiftLeft(arr, n, shift); Print(arr, n);
 	cout << "Сдвиг масива вправо: "; cin >> shift; cout << endl;
@@ -82,16 +82,16 @@ int Sum(int arr[], const int n)
 double Avg(int arr[], const int n)
 {
 	//return (double)Sum(arr,n)/n;
-	int sum = 0; int avg = 0;
+	double sum = 0;double avg = 0;
 	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
-		avg += sum / n;
 	}
+    avg += sum / n;
 	return avg;
 }
 
-int MinValoeIn(int arr[], const int n)
+int MinValueIn(int arr[], const int n)
 {
 	int min = 0;
 	for (int i = 0; i < n; i++)
@@ -104,7 +104,7 @@ int MinValoeIn(int arr[], const int n)
 	return min;
 }
 
-int MaxValoeIn(int arr[], const int n)
+int MaxValueIn(int arr[], const int n)
 {
 	int max = 0;
 	for (int i = 0; i < n; i++)
