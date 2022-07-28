@@ -211,7 +211,7 @@ void main()
 
 	cout << delimetr << endl;
 	cout << "Вывод двумерного массива типа char: " << endl;
-	int c_arr_2[ROWS][COLS];
+	char c_arr_2[ROWS][COLS];
 	FillRand(c_arr_2, ROWS, COLS);
 	Print(c_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива:" << Sum(c_arr_2, ROWS, COLS) << endl;
@@ -298,7 +298,7 @@ void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 0; j < COLS; j++)
 		{
-			arr[i][j] = rand() % 100;
+			arr[i][j] = rand();
 		}
 	}
 }
@@ -369,6 +369,7 @@ void Print(float arr[ROWS][COLS], const int ROWS, const int COLS)
 		{
 			cout << arr[i][j] << tab;
 		}
+		cout << endl;
 	}
 }
 
@@ -380,6 +381,7 @@ void Print(char arr[ROWS][COLS], const int ROWS, const int COLS)
 		{
 			cout << arr[i][j] << tab;
 		}
+		cout << endl;
 	}
 }
 
