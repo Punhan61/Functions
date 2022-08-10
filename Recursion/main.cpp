@@ -45,7 +45,5 @@ int Factorial(int n)
 
 int Fibonacci(int n)
 {
-	if (n < 2)return n;
-	else return Fibonacci(n - 1) + Fibonacci(n - 2);
-	cout << Fibonacci(n);
+	
 }
