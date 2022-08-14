@@ -3,8 +3,8 @@ using namespace std;
 
 void elevator(int floor);
 int Factorial(int n);
+int Power(int n, int a);
 int Fibonacci(int n);
-
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -12,14 +12,17 @@ void main()
 	/*int floor;
 	cout << "Введите номер этажа: "; cin >> floor;
 	elevator(floor);*/
-	int n, f;
-	cout << "Введите чило для вычесления факториала: "; cin >> n;
-	f = Factorial(n);
-	cout << "Factorial " << n << " = " << f << endl;
+	int n, a;
+	/*cout << "Введите чило для вычесления факториала: "; cin >> n;
+	cout << "Факториал числа " << n << " = " << Factorial(n) << endl;
 	
-	
-	cout << "Ряд Фибоначчи,введите число до указанного предела: "; cin >> n;
-	cout<< Fibonacci(n);
+	cout << "Возведение в степень " << endl;
+	cout << "Ведите число: "; cin >> n;
+	cout << "Ведите степень числа: "; cin >> a;
+	cout << n << " ^ " << a << " = " << Power(n, a) << endl;*/
+
+	cout << "Ряд Фибоначчи:введите число "; cin >> n;
+	cout << Fibonacci(n);
 	
 }
 void elevator(int floor)
@@ -36,14 +39,24 @@ void elevator(int floor)
 
 int Factorial(int n)
 {
-	if (n > 1)
+	if (n == 0)return 0;
+	if (n == 1)return 1;
+	return n * Factorial(n - 1);
+}
+int Power(int n, int a)
+{
+	if (a < 1)return 1;
+	else return n * Power(n, (a - 1));
+}
+// не могу разобраться
+int Fibonacci(int n)
+{   int c ;
+	if (n == 0)return 0;
+	if (n == 1 || n == 2)return 1;
+	for (int i = 0; i <= n; i++)
 	{
-		return n * Factorial(n - 1);
+		c = Fibonacci(n - 1) + Fibonacci(n - 2);
+		cout<< c;
 	}
 
-}
-
-int Fibonacci(int n)
-{
-	
 }
