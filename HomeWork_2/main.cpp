@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 #define tab "\t";
-//#define SORTING_AN_ARRAY;
-//#define SORTING_UNIQUE_NUMBER;
+//#define SORTING_AN_ARRAY
+//#define SORTING_UNIQUE_NUMBER
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -124,4 +124,47 @@ void main()
 	}
 #endif // SORTING_UNIQUE_NUMBER
 
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 10;
+		}
+	}
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << tab;
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool met_before = false;
+			for (int k = 0; k < i; k++)
+			{
+				for (int l = 0; l < j; l++)
+				{
+					if (arr[i][j] == arr[k][l])
+					{
+						met_before = true;
+						break;
+					}
+				}
+				if (met_before)continue;
+				int count = 0;
+				for (k = 0; k < ROWS; k++)
+				{
+					for (int l = i + 1; l < COLS; j++)
+					{
+						if (arr[i][j] == arr[k][l])count++;
+					}
+					if (count > 0)cout << arr[i][j] << " повторяется " << count << " раз\n";
+				}
+			}
+		}
+	}
 }
