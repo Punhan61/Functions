@@ -1,29 +1,57 @@
 ﻿#include<iostream>
 using namespace std;
-
+//#define ELEVATOR
+//#define FACTORIAL
+//#define POWER
+//#define FIBONSCCI
+//#define FIBONSCCI_2
 void elevator(int floor);
 int Factorial(int n);
-double Power(int n, int a);
-void Fibonacci(int n);
+double Power(double a, int n);
+void Fibonacci(int n, int a = 0, int b = 1);
+void Fibonacci_2(int n, int a = 0, int b = 1);
+void Fibonacci_3(int n, int a = 0, int b = 1);
+
 void main()
 {
 	setlocale(LC_ALL, "");
-	//cout << "Hello World";
-	/*int floor;
+#ifdef ELEVATOR
+	cout << "Hello World";
+	int floor;
 	cout << "Введите номер этажа: "; cin >> floor;
-	elevator(floor);*/
-	int n, a;
+	elevator(floor);
+#endif // ELEVATOR
+
+#ifdef FACTORIAL
+	int n;
 	cout << "Введите чило для вычесления факториала: "; cin >> n;
 	cout << "Факториал числа " << n << " = " << Factorial(n) << endl;
-	
-	cout << "Возведение в степень " << endl;
-	cout << "Ведите число: "; cin >> n;
-	cout << "Ведите степень числа: "; cin >> a;
-	cout << n << " ^ " << a << " = " << Power(n, a) << endl;
 
-	cout << "Ряд Фибоначчи:введите число "; cin >> n;
-	cout << Fibonacci(n);
-	
+#endif // FACTORIAL
+
+#ifdef POWER
+	int n; double a;
+	cout << "Возведение в степень " << endl;
+	cout << "Ведите число: "; cin >> a;
+	cout << "Ведите степень числа: "; cin >> n;
+	cout << n << " ^ " << a << " = " << Power(a, n) << endl;
+
+#endif // POWER
+
+#ifdef FIBONSCCI
+	int n;
+	cout << "Ряд Фибоначчи:введите предельное число "; cin >> n;
+	Fibonacci(n);
+#endif // FIBONSCCi
+
+#ifdef Fibonacci_2
+	int n;
+	cout << "Введите заданное количество чисел из ряда Фибоначчи :"; cin >> n;
+	Fibonacci_2(n);
+#endif // Fibonacci_2
+	int n;
+	cout << "Введите заданное количество чисел из ряда Фибоначчи :"; cin >> n;
+	Fibonacci_3(n);
 }
 void elevator(int floor)
 {
@@ -40,23 +68,35 @@ void elevator(int floor)
 int Factorial(int n)
 {
 	/*if (n == 0)return 1;
-	return n * Factorial(n - 1);*/
+	else return n * Factorial(n - 1);*/
 	return n == 0 ? 1 : n * Factorial(n - 1);
 }
-double Power(int n, int a)
+
+double Power(double a, int n)
 {
-	if (a < 1)return 1;
-	else return n * Power(n, (a - 1));
+	//if (n == 0)return 1;
+	//else if (n > 0) return a * Power(a, n - 1);
+	//else return 1 / a * Power(a, n + 1);
+	//else return (1 / a, -n);
+	return n == 0 ? 1 : n > 0 ? a * Power(a, n - 1) : 1 / a * Power(a, n + 1);
 }
-// не могу разобраться
-void Fibonacci(int n)
-{   int c ;
-	if (n == 0)return 0;
-	if (n == 1 || n == 2)return 1;
-	for (int i = 0; i <= n; i++)
-	{
-		c = Fibonacci(n - 1) + Fibonacci(n - 2);
-		cout<< c;
-	}
+
+void Fibonacci(int n,int a,int b)
+{   
+	if (a > n)return;
+	cout << a << "\t";
+	Fibonacci(n, b, a + b);
+}
+
+void Fibonacci_2(int n, int a, int b )
+{
+	if (n==0)return;
+	cout << a << "\t";
+	Fibonacci_2(n-1, b, a + b);
+}
+
+void Fibonacci_3(int n, int a , int b)
+{
+	
 
 }
