@@ -10,7 +10,8 @@ int Factorial(int n);
 double Power(double a, int n);
 void Fibonacci(int n, int a = 0, int b = 1);
 void Fibonacci_2(int n, int a = 0, int b = 1);
-void Fibonacci_3(int n, int a = 0, int b = 1);
+void Fibonacci_3(int n);
+
 
 void main()
 {
@@ -44,14 +45,15 @@ void main()
 	Fibonacci(n);
 #endif // FIBONSCCi
 
-#ifdef Fibonacci_2
+#ifdef FIBONSCCI_2
 	int n;
 	cout << "Введите заданное количество чисел из ряда Фибоначчи :"; cin >> n;
 	Fibonacci_2(n);
-#endif // Fibonacci_2
-	int n;
-	cout << "Введите заданное количество чисел из ряда Фибоначчи :"; cin >> n;
+#endif // FIBONSCCI_2
+
+	int n;cin >> n;
 	Fibonacci_3(n);
+	
 }
 void elevator(int floor)
 {
@@ -95,8 +97,15 @@ void Fibonacci_2(int n, int a, int b )
 	Fibonacci_2(n-1, b, a + b);
 }
 
-void Fibonacci_3(int n, int a , int b)
+void Fibonacci_3(int n)
 {
+	int a = 0, b = 1, c = 0;
+	if (n == 0)return;
+	else c = a + b;
+	b = c;
+	cout << b;
+	return Fibonacci_3(n-1);
+}
+
 	
 
-}
